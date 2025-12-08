@@ -1,0 +1,132 @@
+/* Custom CSS enhancements for dark-focused theme */
+
+/* Enhanced dark mode colors for better readability */
+:root[data-theme="dark"] {
+    /* Slightly warmer dark background */
+    --theme: rgb(24, 25, 28);
+    --entry: rgb(38, 40, 44);
+    
+    /* Better contrast for text */
+    --primary: rgb(230, 230, 232);
+    --secondary: rgb(165, 166, 168);
+    --content: rgb(210, 210, 212);
+    
+    /* Subtle accent colors */
+    --accent: rgb(88, 166, 255);
+    --accent-hover: rgb(108, 186, 255);
+    
+    /* Enhanced borders */
+    --border: rgb(58, 60, 64);
+}
+
+/* Profile mode enhancements */
+.profile img {
+    border: 2px solid var(--border);
+    transition: border-color 0.3s ease;
+}
+
+.profile img:hover {
+    border-color: var(--accent);
+}
+
+/* Enhanced link styling */
+.post-content a,
+.page-content a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.post-content a:hover,
+.page-content a:hover {
+    color: var(--accent-hover);
+    border-bottom-color: var(--accent-hover);
+}
+
+/* Code block improvements */
+.highlight pre {
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+/* Section-specific styling hints */
+.portfolio-item {
+    border-left: 3px solid var(--accent);
+    padding-left: 1rem;
+}
+
+.blog-post {
+    border-left: 3px solid var(--secondary);
+    padding-left: 1rem;
+}
+
+/* Enhanced navigation */
+.nav a:hover {
+    color: var(--accent) !important;
+}
+
+/* Better button styling */
+.profile .buttons a {
+    transition: all 0.3s ease;
+}
+
+.profile .buttons a:hover {
+    background: var(--accent);
+    color: var(--theme);
+    transform: translateY(-1px);
+}
+
+/* Subtle animations */
+.post-entry {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Search page enhancements */
+#searchbox {
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.3s ease;
+}
+
+#searchbox:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+/* Table of contents styling */
+.toc {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--entry);
+}
+
+.toc a:hover {
+    color: var(--accent) !important;
+}
+
+/* Better spacing for content sections */
+.post-content h2,
+.page-content h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .profile .buttons {
+        gap: 0.5rem;
+    }
+    
+    .profile .buttons a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="dark">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Interactive Data Visualization Dashboard | Deep Dives &amp; Weekend Projects</title>
+<meta name="keywords" content="project, data-visualization">
+<meta name="description" content="A comprehensive web-based dashboard for visualizing complex datasets with interactive filtering, real-time updates, and multiple chart types. Built to handle large datasets while maintaining responsive performance.
+Project Overview
+This project emerged from a need to visualize multiple data streams in real-time for business intelligence purposes. The dashboard needed to handle datasets with 100K&#43; records while providing smooth interactions and real-time updates.
+Key Objectives:
+
+Process and visualize large datasets efficiently
+Provide interactive filtering and drill-down capabilities
+Support multiple chart types and visualization methods
+Ensure responsive performance across devices
+Enable real-time data updates via WebSocket connections
+
+Technical Implementation
+Architecture
+The system follows a modern microservices architecture with clear separation of concerns:">
+<meta name="author" content="Lukas May">
+<link rel="canonical" href="http://localhost:1313/portfolio/projects/data-visualization-dashboard/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f768aef282543df307c9adf20d885b5b5a4ba8028252f4df7fb97130e1b44f66.css" integrity="sha256-92iu8oJUPfMHya3yDYhbW1pLqAKCUvTff7lxMOG0T2Y=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/portfolio/projects/data-visualization-dashboard/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "light") {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Deep Dives &amp; Weekend Projects (Alt + H)">Deep Dives &amp; Weekend Projects</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/blog/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/portfolio/" title="Portfolio">
+                    <span>Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/portfolio/">Portfolio</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Interactive Data Visualization Dashboard
+    </h1>
+    <div class="post-meta"><span title='2025-11-15 10:00:00 -0500 EST'>November 15, 2025</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>791 words</span>&nbsp;·&nbsp;<span>Lukas May</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#project-overview">Project Overview</a></li>
+    <li><a href="#technical-implementation">Technical Implementation</a>
+      <ul>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#key-features">Key Features</a></li>
+      </ul>
+    </li>
+    <li><a href="#development-process">Development Process</a>
+      <ul>
+        <li><a href="#challenges-faced">Challenges Faced</a></li>
+        <li><a href="#development-methodology">Development Methodology</a></li>
+      </ul>
+    </li>
+    <li><a href="#results--impact">Results &amp; Impact</a>
+      <ul>
+        <li><a href="#performance-metrics">Performance Metrics</a></li>
+        <li><a href="#business-impact">Business Impact</a></li>
+        <li><a href="#technical-achievements">Technical Achievements</a></li>
+      </ul>
+    </li>
+    <li><a href="#lessons-learned">Lessons Learned</a>
+      <ul>
+        <li><a href="#technical-insights">Technical Insights</a></li>
+        <li><a href="#project-management">Project Management</a></li>
+        <li><a href="#technologies">Technologies</a></li>
+      </ul>
+    </li>
+    <li><a href="#future-enhancements">Future Enhancements</a>
+      <ul>
+        <li><a href="#short-term-next-3-months">Short-term (Next 3 months)</a></li>
+        <li><a href="#long-term-6-12-months">Long-term (6-12 months)</a></li>
+      </ul>
+    </li>
+    <li><a href="#links--resources">Links &amp; Resources</a></li>
+  </ul>
+</nav>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>A comprehensive web-based dashboard for visualizing complex datasets with interactive filtering, real-time updates, and multiple chart types. Built to handle large datasets while maintaining responsive performance.</p>
+<h2 id="project-overview">Project Overview<a hidden class="anchor" aria-hidden="true" href="#project-overview">#</a></h2>
+<p>This project emerged from a need to visualize multiple data streams in real-time for business intelligence purposes. The dashboard needed to handle datasets with 100K+ records while providing smooth interactions and real-time updates.</p>
+<p><strong>Key Objectives:</strong></p>
+<ul>
+<li>Process and visualize large datasets efficiently</li>
+<li>Provide interactive filtering and drill-down capabilities</li>
+<li>Support multiple chart types and visualization methods</li>
+<li>Ensure responsive performance across devices</li>
+<li>Enable real-time data updates via WebSocket connections</li>
+</ul>
+<h2 id="technical-implementation">Technical Implementation<a hidden class="anchor" aria-hidden="true" href="#technical-implementation">#</a></h2>
+<h3 id="architecture">Architecture<a hidden class="anchor" aria-hidden="true" href="#architecture">#</a></h3>
+<p>The system follows a modern microservices architecture with clear separation of concerns:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Frontend (React/D3.js) ↔ API Gateway ↔ Data Processing Service ↔ Database
+</span></span><span class="line"><span class="cl">                                    ↔ WebSocket Service      ↔ Message Queue
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Frontend Layer:</strong></p>
+<ul>
+<li>React with TypeScript for component structure</li>
+<li>D3.js for custom visualizations</li>
+<li>WebSocket client for real-time updates</li>
+<li>State management with Redux Toolkit</li>
+</ul>
+<p><strong>Backend Services:</strong></p>
+<ul>
+<li>Node.js/Express API gateway</li>
+<li>Python data processing service with pandas/numpy</li>
+<li>PostgreSQL with optimized indexing strategy</li>
+<li>Redis for caching frequently accessed data</li>
+<li>WebSocket service for real-time data streaming</li>
+</ul>
+<h3 id="key-features">Key Features<a hidden class="anchor" aria-hidden="true" href="#key-features">#</a></h3>
+<h4 id="interactive-visualizations">Interactive Visualizations<a hidden class="anchor" aria-hidden="true" href="#interactive-visualizations">#</a></h4>
+<ul>
+<li><strong>Time Series Charts</strong>: Line charts with zoom/pan capabilities</li>
+<li><strong>Geographic Maps</strong>: Choropleth maps with drill-down by region</li>
+<li><strong>Scatter Plots</strong>: Correlation analysis with dynamic point sizing</li>
+<li><strong>Bar/Column Charts</strong>: Grouped and stacked variants with sorting</li>
+<li><strong>Heat Maps</strong>: Matrix visualizations for correlation data</li>
+</ul>
+<h4 id="performance-optimizations">Performance Optimizations<a hidden class="anchor" aria-hidden="true" href="#performance-optimizations">#</a></h4>
+<ul>
+<li><strong>Data Virtualization</strong>: Only render visible chart elements</li>
+<li><strong>Intelligent Caching</strong>: Redis caching with 5-minute TTL</li>
+<li><strong>Query Optimization</strong>: Database indexes on frequently filtered columns</li>
+<li><strong>Lazy Loading</strong>: Charts load progressively as user scrolls</li>
+<li><strong>WebWorkers</strong>: Heavy calculations moved off main thread</li>
+</ul>
+<h4 id="real-time-updates">Real-time Updates<a hidden class="anchor" aria-hidden="true" href="#real-time-updates">#</a></h4>
+<ul>
+<li>WebSocket connections for live data streaming</li>
+<li>Incremental data updates rather than full reloads</li>
+<li>Optimistic UI updates with rollback on connection failure</li>
+</ul>
+<h2 id="development-process">Development Process<a hidden class="anchor" aria-hidden="true" href="#development-process">#</a></h2>
+<h3 id="challenges-faced">Challenges Faced<a hidden class="anchor" aria-hidden="true" href="#challenges-faced">#</a></h3>
+<h4 id="performance-with-large-datasets">Performance with Large Datasets<a hidden class="anchor" aria-hidden="true" href="#performance-with-large-datasets">#</a></h4>
+<p><strong>Problem</strong>: Initial implementation became sluggish with datasets over 50K records.</p>
+<p><strong>Solution</strong>: Implemented a multi-layered optimization approach:</p>
+<ol>
+<li><strong>Backend aggregation</strong>: Pre-aggregate data at different granularities</li>
+<li><strong>Progressive loading</strong>: Load summary data first, details on demand</li>
+<li><strong>Virtual scrolling</strong>: Only render visible elements in large lists</li>
+<li><strong>Canvas rendering</strong>: Switch from SVG to Canvas for charts with &gt;1000 points</li>
+</ol>
+<h4 id="real-time-data-synchronization">Real-time Data Synchronization<a hidden class="anchor" aria-hidden="true" href="#real-time-data-synchronization">#</a></h4>
+<p><strong>Problem</strong>: WebSocket connections dropping and data getting out of sync.</p>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>Implemented exponential backoff reconnection strategy</li>
+<li>Added heartbeat mechanism to detect connection health</li>
+<li>Built state reconciliation to sync data after reconnection</li>
+<li>Created fallback polling mechanism when WebSocket fails</li>
+</ul>
+<h4 id="cross-browser-compatibility">Cross-browser Compatibility<a hidden class="anchor" aria-hidden="true" href="#cross-browser-compatibility">#</a></h4>
+<p><strong>Problem</strong>: D3.js visualizations rendering differently across browsers.</p>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>Comprehensive browser testing automation with Playwright</li>
+<li>Polyfills for missing ES6+ features in older browsers</li>
+<li>Fallback rendering strategies for unsupported SVG features</li>
+</ul>
+<h3 id="development-methodology">Development Methodology<a hidden class="anchor" aria-hidden="true" href="#development-methodology">#</a></h3>
+<p><strong>Iterative Development</strong>: Built in 2-week sprints with continuous user feedback
+<strong>Test-Driven Approach</strong>: 90%+ code coverage with unit and integration tests
+<strong>Performance Monitoring</strong>: Integrated performance metrics from day one
+<strong>User-Centered Design</strong>: Regular usability testing with actual end users</p>
+<h2 id="results--impact">Results &amp; Impact<a hidden class="anchor" aria-hidden="true" href="#results--impact">#</a></h2>
+<h3 id="performance-metrics">Performance Metrics<a hidden class="anchor" aria-hidden="true" href="#performance-metrics">#</a></h3>
+<ul>
+<li><strong>Load Time</strong>: &lt;2 seconds for dashboards with 100K+ records</li>
+<li><strong>Interaction Response</strong>: &lt;100ms for filtering and chart updates</li>
+<li><strong>Memory Usage</strong>: &lt;200MB for typical dashboard configurations</li>
+<li><strong>Concurrent Users</strong>: Successfully handles 500+ simultaneous users</li>
+</ul>
+<h3 id="business-impact">Business Impact<a hidden class="anchor" aria-hidden="true" href="#business-impact">#</a></h3>
+<ul>
+<li><strong>Decision Speed</strong>: Reduced time to insights from hours to minutes</li>
+<li><strong>Data Accessibility</strong>: Non-technical users can now explore complex datasets</li>
+<li><strong>Cost Savings</strong>: Reduced dependency on expensive BI tools</li>
+<li><strong>User Adoption</strong>: 95%+ adoption rate among target user groups</li>
+</ul>
+<h3 id="technical-achievements">Technical Achievements<a hidden class="anchor" aria-hidden="true" href="#technical-achievements">#</a></h3>
+<ul>
+<li><strong>Scalability</strong>: Handles datasets 10x larger than previous solution</li>
+<li><strong>Reliability</strong>: 99.9% uptime with automatic failover capabilities</li>
+<li><strong>Maintainability</strong>: Modular architecture enables rapid feature development</li>
+<li><strong>Extensibility</strong>: Plugin system allows custom visualizations</li>
+</ul>
+<h2 id="lessons-learned">Lessons Learned<a hidden class="anchor" aria-hidden="true" href="#lessons-learned">#</a></h2>
+<h3 id="technical-insights">Technical Insights<a hidden class="anchor" aria-hidden="true" href="#technical-insights">#</a></h3>
+<ol>
+<li><strong>Premature Optimization</strong>: Initial focus on performance led to over-engineering</li>
+<li><strong>Data Structure Design</strong>: Schema design decisions have long-term performance implications</li>
+<li><strong>User Interface Complexity</strong>: Too many options can overwhelm users</li>
+<li><strong>Real-time vs. Near-real-time</strong>: Understanding when true real-time is actually necessary</li>
+</ol>
+<h3 id="project-management">Project Management<a hidden class="anchor" aria-hidden="true" href="#project-management">#</a></h3>
+<ol>
+<li><strong>User Feedback Loops</strong>: Early and frequent user testing prevents major pivots</li>
+<li><strong>Performance Budgets</strong>: Setting clear performance targets upfront saves rework</li>
+<li><strong>Cross-team Communication</strong>: Regular sync meetings prevent integration issues</li>
+<li><strong>Documentation</strong>: Living documentation saves significant maintenance time</li>
+</ol>
+<h3 id="technologies">Technologies<a hidden class="anchor" aria-hidden="true" href="#technologies">#</a></h3>
+<ol>
+<li><strong>Framework Selection</strong>: React&rsquo;s ecosystem provided excellent visualization libraries</li>
+<li><strong>Database Optimization</strong>: Time invested in proper indexing pays massive dividends</li>
+<li><strong>Caching Strategies</strong>: Redis proved invaluable for frequently accessed data</li>
+<li><strong>Monitoring</strong>: Application Performance Monitoring is essential, not optional</li>
+</ol>
+<h2 id="future-enhancements">Future Enhancements<a hidden class="anchor" aria-hidden="true" href="#future-enhancements">#</a></h2>
+<h3 id="short-term-next-3-months">Short-term (Next 3 months)<a hidden class="anchor" aria-hidden="true" href="#short-term-next-3-months">#</a></h3>
+<ul>
+<li><strong>Mobile Optimization</strong>: Responsive design for tablet/mobile viewing</li>
+<li><strong>Export Functionality</strong>: PDF/PNG export for presentations</li>
+<li><strong>Advanced Filtering</strong>: Natural language query interface</li>
+<li><strong>Collaboration Features</strong>: Shared dashboards with commenting</li>
+</ul>
+<h3 id="long-term-6-12-months">Long-term (6-12 months)<a hidden class="anchor" aria-hidden="true" href="#long-term-6-12-months">#</a></h3>
+<ul>
+<li><strong>Machine Learning Integration</strong>: Automated anomaly detection</li>
+<li><strong>Predictive Analytics</strong>: Forecasting based on historical trends</li>
+<li><strong>Advanced Visualizations</strong>: 3D charts and network diagrams</li>
+<li><strong>Enterprise Features</strong>: SSO, RBAC, audit logging</li>
+</ul>
+<h2 id="links--resources">Links &amp; Resources<a hidden class="anchor" aria-hidden="true" href="#links--resources">#</a></h2>
+<ul>
+<li><strong>Live Demo</strong>: <a href="https://dashboard.example.com">dashboard.example.com</a> <em>(Demo environment)</em></li>
+<li><strong>GitHub Repository</strong>: <a href="https://github.com/lukasmay/data-dashboard">github.com/lukasmay/data-dashboard</a> <em>(Private repository)</em></li>
+<li><strong>Technical Documentation</strong>: <a href="https://docs.dashboard.com">docs.dashboard.com</a></li>
+<li><strong>Performance Case Study</strong>: [Available upon request]</li>
+</ul>
+<hr>
+<p>This project demonstrates full-stack development capabilities, performance optimization expertise, and user-centered design principles. The dashboard continues to serve as a critical business intelligence tool, processing millions of data points daily while maintaining excellent user experience.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/project/">Project</a></li>
+      <li><a href="http://localhost:1313/tags/data-visualization/">Data-Visualization</a></li>
+    </ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Deep Dives &amp; Weekend Projects</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

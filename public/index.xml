@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Deep Dives &amp; Weekend Projects</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Deep Dives &amp; Weekend Projects</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Dec 2025 18:55:42 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interactive Data Visualization Dashboard</title>
+      <link>http://localhost:1313/portfolio/projects/data-visualization-dashboard/</link>
+      <pubDate>Sat, 15 Nov 2025 10:00:00 -0500</pubDate>
+      <guid>http://localhost:1313/portfolio/projects/data-visualization-dashboard/</guid>
+      <description>&lt;p&gt;A comprehensive web-based dashboard for visualizing complex datasets with interactive filtering, real-time updates, and multiple chart types. Built to handle large datasets while maintaining responsive performance.&lt;/p&gt;
+&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;
+&lt;p&gt;This project emerged from a need to visualize multiple data streams in real-time for business intelligence purposes. The dashboard needed to handle datasets with 100K+ records while providing smooth interactions and real-time updates.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key Objectives:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Process and visualize large datasets efficiently&lt;/li&gt;
+&lt;li&gt;Provide interactive filtering and drill-down capabilities&lt;/li&gt;
+&lt;li&gt;Support multiple chart types and visualization methods&lt;/li&gt;
+&lt;li&gt;Ensure responsive performance across devices&lt;/li&gt;
+&lt;li&gt;Enable real-time data updates via WebSocket connections&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;technical-implementation&#34;&gt;Technical Implementation&lt;/h2&gt;
+&lt;h3 id=&#34;architecture&#34;&gt;Architecture&lt;/h3&gt;
+&lt;p&gt;The system follows a modern microservices architecture with clear separation of concerns:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Welcome to Deep Dives &amp; Weekend Projects</title>
+      <link>http://localhost:1313/blog/posts/hello-world/</link>
+      <pubDate>Sun, 07 Dec 2025 18:55:42 -0500</pubDate>
+      <guid>http://localhost:1313/blog/posts/hello-world/</guid>
+      <description>&lt;p&gt;Welcome to my new tech blog and portfolio site! This is where I&amp;rsquo;ll be documenting my technical adventures, weekend projects, and deep dives into interesting technologies.&lt;/p&gt;
+&lt;h2 id=&#34;what-youll-find-here&#34;&gt;What You&amp;rsquo;ll Find Here&lt;/h2&gt;
+&lt;p&gt;This site is organized into two main sections:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Blog&lt;/strong&gt;: Casual documentation of weekend projects, technical experiments, and explorations. These posts capture the real journey of discovery - including the missteps, breakthroughs, and everything in between.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Portfolio&lt;/strong&gt;: More formal documentation of significant projects and research work. These represent comprehensive, structured analysis of complex technical implementations.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sun, 07 Dec 2025 18:55:14 -0500</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h1 id=&#34;about-lukas-may&#34;&gt;About Lukas May&lt;/h1&gt;
+&lt;p&gt;Welcome to my tech blog and portfolio! I&amp;rsquo;m a developer and researcher who loves diving deep into interesting technical problems and sharing what I learn along the way.&lt;/p&gt;
+&lt;h2 id=&#34;what-youll-find-here&#34;&gt;What You&amp;rsquo;ll Find Here&lt;/h2&gt;
+&lt;p&gt;This site serves two main purposes:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Blog&lt;/strong&gt;: Casual documentation of my weekend projects, technical experiments, and deep dives into topics that catch my interest. These posts capture the authentic journey of exploration - including the dead ends, breakthrough moments, and everything in between.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Weekend Project: Building a Rust Web Server</title>
+      <link>http://localhost:1313/blog/posts/weekend-rust-web-server/</link>
+      <pubDate>Sun, 07 Dec 2025 15:00:00 -0500</pubDate>
+      <guid>http://localhost:1313/blog/posts/weekend-rust-web-server/</guid>
+      <description>&lt;p&gt;This weekend I decided to dive into Rust by building a simple web server from scratch. I&amp;rsquo;ve been curious about Rust&amp;rsquo;s memory safety guarantees and wanted to see how it feels to work with in practice.&lt;/p&gt;
+&lt;h2 id=&#34;the-goal&#34;&gt;The Goal&lt;/h2&gt;
+&lt;p&gt;Build a basic HTTP server that can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Handle GET requests&lt;/li&gt;
+&lt;li&gt;Serve static files&lt;/li&gt;
+&lt;li&gt;Parse URLs and route requests&lt;/li&gt;
+&lt;li&gt;Do it all without any external web frameworks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;p&gt;First, I set up a new Rust project:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

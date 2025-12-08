@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Data-Visualization on Deep Dives &amp; Weekend Projects</title>
+    <link>http://localhost:1313/tags/data-visualization/</link>
+    <description>Recent content in Data-Visualization on Deep Dives &amp; Weekend Projects</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Nov 2025 10:00:00 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/data-visualization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interactive Data Visualization Dashboard</title>
+      <link>http://localhost:1313/portfolio/projects/data-visualization-dashboard/</link>
+      <pubDate>Sat, 15 Nov 2025 10:00:00 -0500</pubDate>
+      <guid>http://localhost:1313/portfolio/projects/data-visualization-dashboard/</guid>
+      <description>&lt;p&gt;A comprehensive web-based dashboard for visualizing complex datasets with interactive filtering, real-time updates, and multiple chart types. Built to handle large datasets while maintaining responsive performance.&lt;/p&gt;
+&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;
+&lt;p&gt;This project emerged from a need to visualize multiple data streams in real-time for business intelligence purposes. The dashboard needed to handle datasets with 100K+ records while providing smooth interactions and real-time updates.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key Objectives:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Process and visualize large datasets efficiently&lt;/li&gt;
+&lt;li&gt;Provide interactive filtering and drill-down capabilities&lt;/li&gt;
+&lt;li&gt;Support multiple chart types and visualization methods&lt;/li&gt;
+&lt;li&gt;Ensure responsive performance across devices&lt;/li&gt;
+&lt;li&gt;Enable real-time data updates via WebSocket connections&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;technical-implementation&#34;&gt;Technical Implementation&lt;/h2&gt;
+&lt;h3 id=&#34;architecture&#34;&gt;Architecture&lt;/h3&gt;
+&lt;p&gt;The system follows a modern microservices architecture with clear separation of concerns:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

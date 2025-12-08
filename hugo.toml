@@ -1,13 +1,111 @@
 baseURL = 'https://lukasmay.github.io/'
 languageCode = 'en-us'
-title = 'My blog'
+title = 'Deep Dives & Weekend Projects'
 theme = 'PaperMod'
 
+# Enable JSON output for search functionality
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [params]
-  defaultTheme = "auto"
+  # Theme configuration
+  defaultTheme = "dark"
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  comments = false
+  hidemeta = false
+  hideSummary = false
+  showtoc = true
+  tocopen = false
+
+  # Author information
+  author = "Lukas May"
+  
+  # Profile Mode configuration
+  profileMode.enabled = true
+  profileMode.title = "Lukas May"
+  profileMode.subtitle = "Developer & Tech Researcher"
+  profileMode.imageUrl = "/image.jpeg"  # Hugo will find this in assets/
+  profileMode.imageWidth = 150
+  profileMode.imageHeight = 150
+  profileMode.imageTitle = "Lukas May"
+  
+  # Profile mode buttons
+  [[params.profileMode.buttons]]
+    name = "Blog"
+    url = "/blog"
+
+  [[params.profileMode.buttons]]
+    name = "Portfolio" 
+    url = "/portfolio"
+
+  [[params.profileMode.buttons]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/lukasmay/"
+
+  # Social icons
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/lukasmay/"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/lukasmay"
+
+  # Search configuration
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+# Main navigation menu
+[[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  url = "/blog/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "portfolio"
+  name = "Portfolio"
+  url = "/portfolio/"
+  weight = 20
 
 [[menu.main]]
   identifier = "about"
   name = "About"
   url = "/about/"
-  weight = 10
+  weight = 30
+
+[[menu.main]]
+  identifier = "search"
+  name = "Search"
+  url = "/search/"
+  weight = 40
+
+# Taxonomies
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+# Markup configuration
+[markup]
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    style = "github-dark"
