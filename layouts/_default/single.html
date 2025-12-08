@@ -47,7 +47,7 @@
     <ul class="post-tags">
       {{- range ($.GetTerms $tags) }}
       <li>
-        <a href="{{ .Permalink }}" style="{{- partial "tag-color-hash.html" .LinkTitle -}}">
+        <a href="{{ .Permalink }}" style="{{- partial "tag-color-inline.html" .LinkTitle -}}">
           {{ .LinkTitle }}
         </a>
       </li>

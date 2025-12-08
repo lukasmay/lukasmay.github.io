@@ -1,5 +1,5 @@
-{{/* layouts/partials/tag-color-hash.html */}}
-{{/* Generate consistent colors from tag names using hash */}}
+{{/* layouts/partials/tag-color-inline.html */}}
+{{/* Generate consistent colors from tag names using hash - returns full inline CSS */}}
 {{ $tag := . }}
 {{ $hash := 0 }}
 
@@ -64,5 +64,6 @@
 {{ if lt $hash 0 }}{{ $absHash = mul $hash -1 }}{{ end }}
 {{ $colorIndex := mod $absHash (len $colors) }}
 
-{{/* Return just the color value for homepage cards */}}
-{{ return index $colors $colorIndex }}
+{{/* Return inline CSS styles for clickable post tags */}}
+{{ $selectedColor := index $colors $colorIndex }}
+{{ return printf "background-color: %s; border-color: %s;" $selectedColor $selectedColor }}
