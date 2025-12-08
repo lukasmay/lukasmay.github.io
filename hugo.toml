@@ -1,0 +1,13 @@
+baseURL = 'https://lukasmay.github.io/'
+languageCode = 'en-us'
+title = 'My blog'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = "auto"
+
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 10
