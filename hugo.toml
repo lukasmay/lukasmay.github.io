@@ -48,10 +48,6 @@ theme = 'PaperMod'
     name = "Portfolio" 
     url = "/portfolio"
 
-  [[params.profileMode.buttons]]
-    name = "LinkedIn"
-    url = "https://www.linkedin.com/in/lukasmay/"
-
   # Social icons
   [[params.socialIcons]]
     name = "linkedin"

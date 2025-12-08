@@ -16,7 +16,7 @@
 
 .profile .profile_inner {
     gap: 12px !important;                               /* Tighter internal spacing */
-    margin-bottom: calc(var(--gap) * 2);               /* Space before recent posts */
+    margin-bottom: calc(var(--gap) * 1);               /* Reduced space before recent posts */
 }
 
 /* Button spacing adjustment */
@@ -34,7 +34,7 @@
 
 /* Container for recent posts */
 .homepage-recent-posts {
-    max-width: 720px;                                   /* Match main content width */
+    max-width: 1080px;                                  /* 50% wider (720px * 1.5) */
     margin: 0 auto;
     padding: 0 var(--gap);
 }
