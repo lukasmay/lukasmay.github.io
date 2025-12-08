@@ -10,7 +10,7 @@ ShowBreadCrumbs = true
 ShowPostNavLinks = true
 +++
 
-Welcome to my new tech blog and portfolio site! This is where I'll be documenting my technical adventures, weekend projects, and deep dives into interesting technologies.
+Welcome to my new cyber blog and portfolio site! This is where I'll be documenting my technical adventures, weekend projects, and deep dives into interesting technologies.
 
 ## What You'll Find Here
 
