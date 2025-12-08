@@ -7,7 +7,6 @@ tags = ["project"]
 weight = 1
 ShowToc = true
 ShowBreadCrumbs = true
-ShowPostNavLinks = true
 +++
 
 Placeholder

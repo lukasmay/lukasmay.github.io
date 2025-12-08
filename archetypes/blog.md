@@ -3,11 +3,10 @@ title = "{{ replace .File.ContentBaseName `-` ` ` | title }}"
 date = {{ .Date }}
 draft = false
 categories = ["cyber"]
-tags = ["weekend-project"]
+tags = ["default"]
 ShowToc = true
 ShowReadingTime = true
 ShowBreadCrumbs = true
-ShowPostNavLinks = true
 ShowCodeCopyButtons = true
 +++
 

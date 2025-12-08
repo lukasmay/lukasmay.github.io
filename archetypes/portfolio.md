@@ -7,7 +7,6 @@ tags = ["project"]
 weight = 1  # Higher weight = higher priority in portfolio
 ShowToc = true
 ShowBreadCrumbs = true
-ShowPostNavLinks = true
 cover.image = ""
 cover.alt = ""
 +++

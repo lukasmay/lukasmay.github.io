@@ -7,7 +7,6 @@ tags = ["OT", "ICS", "malware"]
 ShowToc = true
 ShowReadingTime = true
 ShowBreadCrumbs = true
-ShowPostNavLinks = true
 ShowCodeCopyButtons = true
 +++
 
