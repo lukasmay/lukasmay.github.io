@@ -21,8 +21,11 @@ Describe the project or research.
 
 ## Technical Details
 
-```code
+```c
 // Code examples here
+for (int i = 0; i < 10; i++) {
+    printf("%d, ", i);
+}
 ```
 
 ## Challenges & Solutions

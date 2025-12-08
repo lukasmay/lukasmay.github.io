@@ -13,7 +13,7 @@ theme = 'PaperMod'
   disableThemeToggle = false
   ShowReadingTime = true
   ShowShareButtons = false
-  ShowPostNavLinks = true
+  ShowPostNavLinks = false
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
   ShowWordCount = true
@@ -39,14 +39,7 @@ theme = 'PaperMod'
   profileMode.imageHeight = 150
   profileMode.imageTitle = "Lukas May"
   
-  # Profile mode buttons
-  [[params.profileMode.buttons]]
-    name = "Blog"
-    url = "/blog"
-
-  [[params.profileMode.buttons]]
-    name = "Portfolio" 
-    url = "/portfolio"
+  # Profile mode buttons (removed - using top navigation instead)
 
   # Social icons
   [[params.socialIcons]]

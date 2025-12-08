@@ -64,5 +64,6 @@
 {{ if lt $hash 0 }}{{ $absHash = mul $hash -1 }}{{ end }}
 {{ $colorIndex := mod $absHash (len $colors) }}
 
-{{/* Return the color */}}
-{{ return index $colors $colorIndex }}
+{{/* Return inline CSS styles */}}
+{{ $selectedColor := index $colors $colorIndex }}
+{{ return printf "background-color: %s; border-color: %s;" $selectedColor $selectedColor }}

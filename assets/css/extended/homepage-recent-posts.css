@@ -16,16 +16,16 @@
 
 .profile .profile_inner {
     gap: 12px !important;                               /* Tighter internal spacing */
-    margin-bottom: calc(var(--gap) * 0.5);             /* Further reduced space before recent posts */
+    margin-bottom: calc(var(--gap) * 0.75);            /* Space before recent posts (no buttons) */
 }
 
-/* Button spacing adjustment */
+/* Button spacing (not used since buttons removed, but keeping for theme compatibility) */
 .buttons {
-    margin: calc(var(--gap) * 0.6) 0 !important;        /* Reduced from 1.2 to 0.6 */
+    display: none !important;                           /* Hide buttons section completely */
 }
 
 .button {
-    margin: 6px 8px !important;                        /* Slightly more spacing between buttons */
+    margin: 6px 8px !important;                        /* Kept for theme compatibility */
 }
 
 /* ========================================
