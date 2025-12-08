@@ -16,12 +16,12 @@
 
 .profile .profile_inner {
     gap: 12px !important;                               /* Tighter internal spacing */
-    margin-bottom: calc(var(--gap) * 1);               /* Reduced space before recent posts */
+    margin-bottom: calc(var(--gap) * 0.5);             /* Further reduced space before recent posts */
 }
 
 /* Button spacing adjustment */
 .buttons {
-    margin: calc(var(--gap) * 1.2) 0 !important;
+    margin: calc(var(--gap) * 0.6) 0 !important;        /* Reduced from 1.2 to 0.6 */
 }
 
 .button {
@@ -42,9 +42,10 @@
 /* Grid layout for recent posts */
 .recent-posts-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);              /* 3 columns desktop */
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); /* Wider cards with minimum width */
     gap: calc(var(--gap) * 1.2);                       /* 28px gap */
     margin-bottom: calc(var(--gap) * 2);               /* Bottom spacing */
+    justify-content: center;                            /* Center the grid */
 }
 
 /* ========================================
