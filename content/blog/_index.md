@@ -1,5 +1,5 @@
 +++
-title = "Tech Blog"
+title = "Cyber Blog"
 date = 2025-12-07T18:00:00-05:00
 draft = false
 +++

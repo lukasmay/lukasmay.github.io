@@ -1,0 +1,319 @@
+/* Homepage Recent Posts Enhancement */
+/* Custom styling for homepage with recent posts below profile */
+
+/* ========================================
+   PROFILE SECTION ADJUSTMENTS
+======================================== */
+
+/* Adjust profile layout to make room for content below */
+.main .profile {
+    min-height: auto !important;                         /* Remove full viewport height constraint */
+    padding-top: calc(var(--gap) * 2) !important;      /* Medium adjustment upward */
+    padding-bottom: calc(var(--gap) * 1.5) !important; /* Space for posts below */
+    align-items: center;
+    text-align: center;
+}
+
+.profile .profile_inner {
+    gap: 12px !important;                               /* Tighter internal spacing */
+    margin-bottom: calc(var(--gap) * 2);               /* Space before recent posts */
+}
+
+/* Button spacing adjustment */
+.buttons {
+    margin: calc(var(--gap) * 1.2) 0 !important;
+}
+
+.button {
+    margin: 6px 8px !important;                        /* Slightly more spacing between buttons */
+}
+
+/* ========================================
+   RECENT POSTS SECTION
+======================================== */
+
+/* Container for recent posts */
+.homepage-recent-posts {
+    max-width: 720px;                                   /* Match main content width */
+    margin: 0 auto;
+    padding: 0 var(--gap);
+}
+
+/* Grid layout for recent posts */
+.recent-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);              /* 3 columns desktop */
+    gap: calc(var(--gap) * 1.2);                       /* 28px gap */
+    margin-bottom: calc(var(--gap) * 2);               /* Bottom spacing */
+}
+
+/* ========================================
+   RECENT POST CARDS
+======================================== */
+
+/* Individual post card styling */
+.recent-post-card {
+    background: var(--entry);                           /* Theme background */
+    border: 2px solid var(--border);                   /* More prominent than search cards */
+    border-radius: var(--radius);                      /* 8px radius */
+    padding: calc(var(--gap) * 0.75);                  /* 18px padding */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    cursor: pointer;
+}
+
+/* Card hover effects - lift + border change */
+.recent-post-card:hover {
+    transform: translateY(-3px);                        /* Lift effect */
+    border-color: var(--accent);                       /* Colored border */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);       /* Soft shadow */
+}
+
+/* Dark mode shadow adjustment */
+[data-theme="dark"] .recent-post-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* ========================================
+   CARD CONTENT STYLING
+======================================== */
+
+/* Section + Category header */
+.post-meta-header {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.section-name {
+    color: var(--accent);
+}
+
+.separator {
+    color: var(--secondary);
+    margin: 0 4px;
+}
+
+.category-name {
+    color: var(--primary);
+}
+
+/* Post title styling */
+.post-title {
+    margin: 8px 0;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.post-title a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.post-title a:hover {
+    color: var(--accent);
+}
+
+/* Post date styling */
+.post-date {
+    font-size: 12px;
+    color: var(--secondary);
+    margin: 6px 0 10px 0;
+}
+
+/* ========================================
+   TAG STYLING WITH HASH COLORS
+======================================== */
+
+/* Tags container */
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+/* Individual tag styling */
+.post-tags .tag {
+    display: inline-block;
+    padding: 3px 8px;
+    font-size: 10px;
+    font-weight: 500;
+    border-radius: 12px;
+    color: white !important;                            /* White text for all backgrounds */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);        /* Ensure readability */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    text-decoration: none;
+    border: none;
+    opacity: 0.9;
+}
+
+.post-tags .tag:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/* Tag overflow indicator */
+.tag-more {
+    font-size: 10px;
+    color: var(--secondary);
+    padding: 3px 4px;
+}
+
+/* ========================================
+   CARD LINK OVERLAY
+======================================== */
+
+/* Invisible link overlay for entire card */
+.card-link {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    text-decoration: none;
+}
+
+/* Ensure other links are above overlay */
+.post-title a {
+    position: relative;
+    z-index: 2;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+/* Tablet layout */
+@media (max-width: 1024px) {
+    .recent-posts-grid {
+        grid-template-columns: repeat(2, 1fr);          /* 2 columns tablet */
+        gap: var(--gap);
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    /* Single column layout */
+    .recent-posts-grid {
+        grid-template-columns: 1fr;                     /* Single column mobile */
+        gap: calc(var(--gap) * 0.8);                   /* Reduced gap */
+    }
+    
+    /* Profile adjustments */
+    .main .profile {
+        padding-top: var(--gap) !important;            /* Less top padding on mobile */
+    }
+    
+    .profile .profile_inner {
+        margin-bottom: var(--gap);                      /* Less bottom margin */
+    }
+    
+    /* Card adjustments */
+    .recent-post-card {
+        padding: calc(var(--gap) * 0.6);              /* Reduced padding */
+    }
+    
+    /* Hide date and tags on mobile (show only title and category) */
+    .post-date,
+    .post-tags {
+        display: none;
+    }
+    
+    /* Adjust title size */
+    .post-title {
+        font-size: 15px;
+        margin: 6px 0;
+    }
+    
+    /* Adjust meta header */
+    .post-meta-header {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+}
+
+/* Very small mobile screens */
+@media (max-width: 480px) {
+    .homepage-recent-posts {
+        padding: 0 calc(var(--gap) * 0.8);
+    }
+    
+    .recent-post-card {
+        padding: calc(var(--gap) * 0.5);
+    }
+}
+
+/* ========================================
+   RSS ICON SUBTLE STYLING
+======================================== */
+
+/* Make RSS icon less prominent */
+.page-header a[title="RSS"] svg,
+.page-header a[aria-label="RSS"] svg {
+    width: 18px !important;                             /* Reduced from 23px */
+    height: 18px !important;
+    opacity: 0.5;                                       /* Make it subtle */
+    transition: opacity 0.3s ease;
+    margin-left: 8px;                                   /* Add some spacing */
+}
+
+.page-header a[title="RSS"]:hover svg,
+.page-header a[aria-label="RSS"]:hover svg {
+    opacity: 0.8;                                       /* Still visible on hover */
+}
+
+/* ========================================
+   ACCESSIBILITY IMPROVEMENTS
+======================================== */
+
+/* Focus states for keyboard navigation */
+.recent-post-card:focus-within {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.card-link:focus {
+    outline: none;                                      /* Remove default, handled by card */
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .recent-post-card,
+    .post-tags .tag,
+    .button {
+        transition: none;
+    }
+    
+    .recent-post-card:hover {
+        transform: none;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+======================================== */
+
+@media print {
+    .homepage-recent-posts {
+        break-inside: avoid;
+    }
+    
+    .recent-post-card {
+        border: 1px solid #ccc;
+        box-shadow: none;
+        break-inside: avoid;
+        margin-bottom: 1rem;
+    }
+    
+    .post-tags {
+        display: none;                                  /* Hide colored tags in print */
+    }
+}

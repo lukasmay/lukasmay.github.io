@@ -12,7 +12,6 @@ cover.image = ""
 cover.alt = ""
 +++
 
-Professional project documentation template.
 
 ## Project Overview
 

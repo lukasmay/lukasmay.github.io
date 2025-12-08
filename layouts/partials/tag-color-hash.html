@@ -1,0 +1,68 @@
+{{/* layouts/partials/tag-color-hash.html */}}
+{{/* Generate consistent colors from tag names using hash */}}
+{{ $tag := . }}
+{{ $hash := 0 }}
+
+{{/* Generate hash from tag name */}}
+{{ range $i, $char := split (lower $tag) "" }}
+  {{ $charCode := 0 }}
+  {{ if eq $char "a" }}{{ $charCode = 97 }}{{ end }}
+  {{ if eq $char "b" }}{{ $charCode = 98 }}{{ end }}
+  {{ if eq $char "c" }}{{ $charCode = 99 }}{{ end }}
+  {{ if eq $char "d" }}{{ $charCode = 100 }}{{ end }}
+  {{ if eq $char "e" }}{{ $charCode = 101 }}{{ end }}
+  {{ if eq $char "f" }}{{ $charCode = 102 }}{{ end }}
+  {{ if eq $char "g" }}{{ $charCode = 103 }}{{ end }}
+  {{ if eq $char "h" }}{{ $charCode = 104 }}{{ end }}
+  {{ if eq $char "i" }}{{ $charCode = 105 }}{{ end }}
+  {{ if eq $char "j" }}{{ $charCode = 106 }}{{ end }}
+  {{ if eq $char "k" }}{{ $charCode = 107 }}{{ end }}
+  {{ if eq $char "l" }}{{ $charCode = 108 }}{{ end }}
+  {{ if eq $char "m" }}{{ $charCode = 109 }}{{ end }}
+  {{ if eq $char "n" }}{{ $charCode = 110 }}{{ end }}
+  {{ if eq $char "o" }}{{ $charCode = 111 }}{{ end }}
+  {{ if eq $char "p" }}{{ $charCode = 112 }}{{ end }}
+  {{ if eq $char "q" }}{{ $charCode = 113 }}{{ end }}
+  {{ if eq $char "r" }}{{ $charCode = 114 }}{{ end }}
+  {{ if eq $char "s" }}{{ $charCode = 115 }}{{ end }}
+  {{ if eq $char "t" }}{{ $charCode = 116 }}{{ end }}
+  {{ if eq $char "u" }}{{ $charCode = 117 }}{{ end }}
+  {{ if eq $char "v" }}{{ $charCode = 118 }}{{ end }}
+  {{ if eq $char "w" }}{{ $charCode = 119 }}{{ end }}
+  {{ if eq $char "x" }}{{ $charCode = 120 }}{{ end }}
+  {{ if eq $char "y" }}{{ $charCode = 121 }}{{ end }}
+  {{ if eq $char "z" }}{{ $charCode = 122 }}{{ end }}
+  {{ if eq $char "-" }}{{ $charCode = 45 }}{{ end }}
+  {{ if eq $char "_" }}{{ $charCode = 95 }}{{ end }}
+  {{ if eq $char "0" }}{{ $charCode = 48 }}{{ end }}
+  {{ if eq $char "1" }}{{ $charCode = 49 }}{{ end }}
+  {{ if eq $char "2" }}{{ $charCode = 50 }}{{ end }}
+  {{ if eq $char "3" }}{{ $charCode = 51 }}{{ end }}
+  {{ if eq $char "4" }}{{ $charCode = 52 }}{{ end }}
+  {{ if eq $char "5" }}{{ $charCode = 53 }}{{ end }}
+  {{ if eq $char "6" }}{{ $charCode = 54 }}{{ end }}
+  {{ if eq $char "7" }}{{ $charCode = 55 }}{{ end }}
+  {{ if eq $char "8" }}{{ $charCode = 56 }}{{ end }}
+  {{ if eq $char "9" }}{{ $charCode = 57 }}{{ end }}
+  {{ $hash = add $hash (mul $charCode (add $i 1)) }}
+{{ end }}
+
+{{/* Cybersecurity-themed color palette */}}
+{{ $colors := slice 
+  "#dc2626"  
+  "#ea580c"  
+  "#0891b2"  
+  "#2563eb"  
+  "#059669"  
+  "#7c3aed"  
+  "#0d9488"  
+  "#c2410c"
+}}
+
+{{/* Get color index from hash */}}
+{{ $absHash := $hash }}
+{{ if lt $hash 0 }}{{ $absHash = mul $hash -1 }}{{ end }}
+{{ $colorIndex := mod $absHash (len $colors) }}
+
+{{/* Return the color */}}
+{{ return index $colors $colorIndex }}

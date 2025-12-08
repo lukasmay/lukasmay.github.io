@@ -2,16 +2,14 @@
 title = "{{ replace .File.ContentBaseName `-` ` ` | title }}"
 date = {{ .Date }}
 draft = false
-categories = ["web-dev"]  # Options: web-dev, data-science, systems, ai-ml, research
-tags = ["weekend-project"]  # Options: weekend-project, deep-dive, tutorial
+categories = ["cyber"]
+tags = ["weekend-project"]
 ShowToc = true
 ShowReadingTime = true
 ShowBreadCrumbs = true
 ShowPostNavLinks = true
 ShowCodeCopyButtons = true
 +++
-
-Write your blog post content here...
 
 ## Introduction
 

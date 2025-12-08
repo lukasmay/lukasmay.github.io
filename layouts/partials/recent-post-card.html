@@ -1,0 +1,42 @@
+{{/* layouts/partials/recent-post-card.html */}}
+{{/* Reusable component for recent post cards */}}
+{{ $post := . }}
+
+<article class="recent-post-card">
+    {{/* Section + Category */}}
+    <div class="post-meta-header">
+        <span class="section-name">
+            {{ if eq $post.Section "blog" }}Cyber Blog{{ else }}Portfolio{{ end }}
+        </span>
+        <span class="separator"> > </span>
+        <span class="category-name">
+            {{ if $post.Params.categories }}{{ index $post.Params.categories 0 }}{{ else }}General{{ end }}
+        </span>
+    </div>
+    
+    {{/* Title */}}
+    <h3 class="post-title">
+        <a href="{{ $post.Permalink }}">{{ $post.Title }}</a>
+    </h3>
+    
+    {{/* Date */}}
+    <div class="post-date">{{ $post.Date.Format "January 2, 2006" }}</div>
+    
+    {{/* Tags with hash-based colors */}}
+    {{ if $post.Params.tags }}
+    <div class="post-tags">
+        {{ range first 4 $post.Params.tags }}
+        {{ $tagColor := partial "tag-color-hash" . }}
+        <span class="tag" style="background-color: {{ $tagColor }};">
+            #{{ . }}
+        </span>
+        {{ end }}
+        {{ if gt (len $post.Params.tags) 4 }}
+        <span class="tag-more">...</span>
+        {{ end }}
+    </div>
+    {{ end }}
+    
+    {{/* Link overlay */}}
+    <a class="card-link" aria-label="Read {{ $post.Title | plainify }}" href="{{ $post.Permalink }}"></a>
+</article>

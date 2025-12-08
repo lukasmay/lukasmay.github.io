@@ -2,31 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Deep Dives &amp; Weekend Projects</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://lukasmay.github.io/categories/</link>
     <description>Recent content in Categories on Deep Dives &amp; Weekend Projects</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Dec 2025 18:55:42 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Dec 2025 22:25:58 -0500</lastBuildDate>
+    <atom:link href="https://lukasmay.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Web-Dev</title>
-      <link>http://localhost:1313/categories/web-dev/</link>
-      <pubDate>Sun, 07 Dec 2025 18:55:42 -0500</pubDate>
-      <guid>http://localhost:1313/categories/web-dev/</guid>
+      <title>Ics</title>
+      <link>https://lukasmay.github.io/categories/ics/</link>
+      <pubDate>Sun, 07 Dec 2025 22:25:58 -0500</pubDate>
+      <guid>https://lukasmay.github.io/categories/ics/</guid>
       <description></description>
     </item>
     <item>
-      <title>Systems</title>
-      <link>http://localhost:1313/categories/systems/</link>
-      <pubDate>Sun, 07 Dec 2025 15:00:00 -0500</pubDate>
-      <guid>http://localhost:1313/categories/systems/</guid>
+      <title>Malware</title>
+      <link>https://lukasmay.github.io/categories/malware/</link>
+      <pubDate>Sun, 07 Dec 2025 22:25:58 -0500</pubDate>
+      <guid>https://lukasmay.github.io/categories/malware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ot</title>
+      <link>https://lukasmay.github.io/categories/ot/</link>
+      <pubDate>Sun, 07 Dec 2025 22:25:58 -0500</pubDate>
+      <guid>https://lukasmay.github.io/categories/ot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reversing</title>
+      <link>https://lukasmay.github.io/categories/reversing/</link>
+      <pubDate>Sun, 07 Dec 2025 22:25:58 -0500</pubDate>
+      <guid>https://lukasmay.github.io/categories/reversing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web-Dev</title>
+      <link>https://lukasmay.github.io/categories/web-dev/</link>
+      <pubDate>Sun, 07 Dec 2025 18:55:42 -0500</pubDate>
+      <guid>https://lukasmay.github.io/categories/web-dev/</guid>
       <description></description>
     </item>
     <item>
       <title>Portfolio</title>
-      <link>http://localhost:1313/categories/portfolio/</link>
+      <link>https://lukasmay.github.io/categories/portfolio/</link>
       <pubDate>Sat, 15 Nov 2025 10:00:00 -0500</pubDate>
-      <guid>http://localhost:1313/categories/portfolio/</guid>
+      <guid>https://lukasmay.github.io/categories/portfolio/</guid>
       <description></description>
     </item>
   </channel>
