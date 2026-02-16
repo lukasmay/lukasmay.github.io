@@ -1,9 +1,19 @@
++++
+title = "AI Stack"
+date = 2026-02-16T01:16:08-05:00
+draft = false
+categories = ["Deep Dive"]
+tags = ["AI", "docs"]
+ShowToc = true
+ShowReadingTime = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
++++
+
 # Overview
 I have been looking into self hosting LLMs and this is my attempt at putting everything that I learned on the subject down in one place (so I can stop forgetting things). Along side that I wanted to include some information about the setup that I am using to self host LLMs on my laptop and the steps that I took to build and optimize. While that is going to come in the future as their are still some things that I am changing and this is long enough already I removed some of those parts to be in the next section.
 
 The end result of this project for me is a setup that integrates cloud AI with local LLMs to help with reverse engineering, coding, and general troubleshooting. This posts goal is to inform you about a good deal of the stuff that is going on under the hood if you want to self host LLM and build workflows around them.
-
-> I have tried to make this cover as much as I can confidently say. I plan on doing a second one on the actual setup that I have on my laptop as described above along with some more analysis on the higher level decisions that come from the lower level understanding.
 
 # Background
 When it comes to self hosting LLMs for the most part you could just download Ollama install the models and call it a day but there are lots of moving pieces to consider if you want to go beyond that. The first thing to consider when self hosting LLMs is what models you want to run so you can build the best setup for the model but to understand some of the things I am talking about in the model section that will be more towards the end.
