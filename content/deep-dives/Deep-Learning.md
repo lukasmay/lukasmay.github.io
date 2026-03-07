@@ -8,6 +8,7 @@ ShowToc = true
 ShowReadingTime = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
+math = true
 +++
 
 ## Intro

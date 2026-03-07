@@ -92,6 +92,13 @@ theme = 'PaperMod'
 
 # Markup configuration
 [markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
   [markup.highlight]
     noClasses = false
     codeFences = true
