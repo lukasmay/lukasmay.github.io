@@ -1,4 +1,4 @@
-baseURL = 'https://lukasmay.github.io/'
+baseURL = 'https://blog.lukasmay.com/'
 languageCode = 'en-us'
 title = 'Deep Dives & Weekend Projects'
 theme = 'PaperMod'
@@ -62,15 +62,15 @@ theme = 'PaperMod'
 
 # Main navigation menu
 [[menu.main]]
-  identifier = "blog"
-  name = "Blog"
-  url = "/blog/"
+  identifier = "deep-dives"
+  name = "Deep Dives"
+  url = "/deep-dives/"
   weight = 10
 
 [[menu.main]]
-  identifier = "portfolio"
-  name = "Portfolio"
-  url = "/portfolio/"
+  identifier = "projects"
+  name = "Projects"
+  url = "/projects/"
   weight = 20
 
 [[menu.main]]

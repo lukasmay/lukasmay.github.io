@@ -6,7 +6,7 @@
     {{/* Section + Category */}}
     <div class="post-meta-header">
         <span class="section-name">
-            {{ if eq $post.Section "blog" }}Cyber Blog{{ else }}Portfolio{{ end }}
+            {{ if eq $post.Section "deep-dives" }}Deep Dives{{ else if eq $post.Section "projects" }}Projects{{ else }}{{ $post.Section | title }}{{ end }}
         </span>
         <span class="separator"> > </span>
         <span class="category-name">

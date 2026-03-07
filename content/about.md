@@ -6,14 +6,14 @@ title = 'About'
 
 # About Lukas May
 
-Welcome to my cybersecurity blog and portfolio! I'm a Junior at the Rochester Insitute of Technology (RIT) studying cybersecurity who loves diving deep into interesting technical problems and sharing what I learn along the way. 
+Welcome to my cybersecurity blog! I'm a Junior at the Rochester Insitute of Technology (RIT) studying cybersecurity who loves diving deep into interesting technical problems and sharing what I learn along the way. 
 
-A big part of my focus is OT security--how we defend critical infrastructure like the electric grid, water treatment plants, or manufacturing systems. Through this blog I aim to share my research and analysis of the cybersecurity and tech world.
+A big part of my focus is OT security--how we defend critical infrastructure like the electric grid, water treatment plants, or manufacturing systems. Through this site I aim to share my research and analysis of the cybersecurity and tech world.
 
 ## What You'll Find Here
 This site serves two main purposes:
-- **Blog**: Casual documentation of my weekend projects, technical experiments, and deep dives into topics that catch my interest.
-- **Portfolio**: More formal documentation of significant projects. These represent structured, comprehensive analysis of complex technical implementations.
+- **Deep Dives**: In-depth explorations of technical topics, research, and interesting technologies I'm learning about.
+- **Projects**: Documentation of things I've built, including technical implementations and weekend experiments.
 
 ## Get In Touch
 The best way to reach me is through [LinkedIn](https://www.linkedin.com/in/lukasmay/)

@@ -51,12 +51,12 @@
 }
 
 /* Section-specific styling hints */
-.portfolio-item {
+.project-item {
     border-left: 3px solid var(--accent);
     padding-left: 1rem;
 }
 
-.blog-post {
+.deep-dive-post {
     border-left: 3px solid var(--secondary);
     padding-left: 1rem;
 }
