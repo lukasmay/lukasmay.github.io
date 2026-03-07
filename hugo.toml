@@ -26,6 +26,7 @@ theme = 'PaperMod'
   hideSummary = false
   showtoc = true
   tocopen = false
+  math = true
 
   # Author information
   author = "Lukas May"
