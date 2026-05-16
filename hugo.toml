@@ -1,4 +1,4 @@
-baseURL = 'https://lukasmay.github.io/'
+baseURL = 'https://blog.lukasmay.com/'
 languageCode = 'en-us'
 title = 'Deep Dives & Weekend Projects'
 theme = 'PaperMod'
