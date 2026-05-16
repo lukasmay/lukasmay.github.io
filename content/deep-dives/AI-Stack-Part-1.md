@@ -1,5 +1,5 @@
 +++
-title = "AI Stack"
+title = "AI Stack Part 1"
 date = 2026-02-16T01:16:08-05:00
 draft = false
 categories = ["Deep Dive"]
